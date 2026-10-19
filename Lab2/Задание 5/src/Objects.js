@@ -24,14 +24,11 @@ export function personUpdate(data) {
   Верните список названий этих полей в алфавитном порядке в виде массива строк.
 */
 export function objectFieldsList(obj1, obj2, obj3) {
-	// Собираем все ключи из трёх объектов
 	const allKeys = [
 		...Object.keys(obj1 || {}),
 		...Object.keys(obj2 || {}),
 		...Object.keys(obj3 || {})
 	];
-
-	// Убираем дубликаты через Set, затем сортируем в алфавитном порядке
 	return [...new Set(allKeys)].sort();
 }
 
